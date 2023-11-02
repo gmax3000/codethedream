@@ -16,3 +16,4 @@ The following APIs were used:
 https://thedogapi.com
 https://thecatapi.com
 
+<img width="687" alt="site_image" src="https://github.com/gmax3000/codethedream/assets/16971034/176392e2-f4bd-4ad8-9cbc-76e19e9f685d">
