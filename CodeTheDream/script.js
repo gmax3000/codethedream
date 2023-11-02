@@ -50,14 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchRandomDog();
 });
 
-// rndomizer
+// randomizer
 function getRandomNumber(min, max) {
     // Generate a random decimal number between 0 and 1
     const randomDecimal = Math.random();
   
     // Scale and shift the random decimal to fit the specified range
     const randomInRange = Math.floor(randomDecimal * (max - min + 1)) + min;
-  
     return randomInRange;
   }
 
@@ -69,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to fetch a random dog image from The Pet API
     function fetchRandomPet() {
         const randomNumber = getRandomNumber(0, 1);
-        if(randomNumber == 0){
+        if(randomNumber === 0){
             fetch("https://api.thedogapi.com/v1/images/search")
             .then((response) => response.json())
             .then((data) => {
@@ -81,8 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("Error fetching dog image: " + error);
             });
             newPetButton.addEventListener("click", fetchRandomPet);
-            // fetchRandomDog();
-      }else{
+      } else {
             fetch("https://api.thecatapi.com/v1/images/search")
             .then((response) => response.json())
             .then((data) => {
@@ -94,10 +92,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("Error fetching cat image: " + error);
             });
             newPetButton.addEventListener("click", fetchRandomPet);
-            // fetchRandomCat();
       }
     }
-
     // Fetch the first pet image when the page loads
     fetchRandomPet();
 });
